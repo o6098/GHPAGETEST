@@ -2,7 +2,7 @@
   "name": "miku",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://o6098.github.io/mikudesu/",
+  "homepage": "https://o6098.github.io/GHPAGETEST/",
   "babel": {
     "presets": [
       "es2015",
@@ -11,8 +11,10 @@
   },
   "main": "client.js",
   "scripts": {
+    "build": "react-scripts build",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback",
-    "deploy": "npm run build&&gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +28,7 @@
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.1.1",
     "redux": "^3.7.2",
     "redux-ajax": "^1.0.5",
     "redux-logger": "^3.0.6",
